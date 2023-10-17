@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizarra</title>
+  <link rel="icon" href="lapiz-icono.png" type="image/png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div id="background"></div> <!-- Div para el fondo -->
+  <canvas width="500px" height="500px" id="drawing"></canvas>
+
+  <div id="sidebar">
+  
+    <div id="color-palette">
+      <input type="button" class="image-pink" id="pink-color">
+      <input type="button" class="image-blue" id="blue-color">
+      <input type="button" class="image-green" id="green-color">
+      <input type="button" class="image-yellow" id="yellow-color">
+      <input type="button" class="image-red" id="red-color">
+      <input type="button" class="image-orange" id="orange-color">
+      <input type="button" class="image-purple" id="plum-color">
+      <input type="button" class="image-white" id="white-color">
+      <input type="button" class="image-black" id="black-color">
+      
+    </div>
+
+    <div id="buttons">
+      <button class="pencil-button" id="pencil-button"> 
+      <img src="pen.png" alt="Lapiz"> </button>
+      <button class="eraser-button" id="eraser-button"> 
+        <img src="eraser.png" alt="Goma"> </button>
+  </div>
+
+  <div id="pen-options">
+    <input type="range" class="pen-size" id="pen-size" min="1" max="60" step="1" value="5">
+  </div>
+
+  </div>   
+
+  <!-- SCRIPTS -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

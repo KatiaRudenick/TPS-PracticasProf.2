@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+#color-palette {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ /* Tres columnas de igual tamaño */
+}
+
+/* Estilo para el fondo */
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('hojita2.jpg');
+  background-size: cover;
+  z-index: -1; /* Coloca el fondo detrás del canvas */
+}
+
+/* Estilo del canvas (lienzo de dibujo) */
+#drawing {
+  width: 100%; /* Ocupa todo el ancho disponible en el contenedor */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: block;
+}
+
+#sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 170px; 
+  height: 47%;
+  background-color: #f1f1f1;
+  padding: 30px; /*Espacio interno para los botones y el contenido */
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1); /* Sombra en el lado izquierdo */
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row; /* Alinea los botones en una fila */
+  justify-content: space-between; /* Espacio entre los botones, uno a la izquierda y otro a la derecha */
+  align-items: center;
+  margin-top: 15px;
+}
+
+.pencil-button,
+.eraser-button {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+
+}
+
+.eraser-button{
+  margin-right: 15px;
+}
+
+.pencil-button{
+  margin-left: 15px;
+}
+
+.pencil-button img,
+.eraser-button img {
+  width: 60px;
+  height: 60px;
+}
+
+.image-pink {
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  background-image: url('pink.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.image-blue {
+  width: 60px;
+  height: 60px;
+  background-image: url('blue.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.image-green {
+  width: 60px;
+  height: 60px;
+  background-image: url('green.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.image-yellow {
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  background-image: url('yellow.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.image-red {
+  width: 60px;
+  height: 60px;
+  background-image: url('red.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.image-purple {
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  background-image: url('plum.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.image-orange {
+  width: 60px;
+  height: 60px;
+  background-image: url('orange.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.image-white {
+  width: 60px;
+  height: 60px;
+  background-image: url('white.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.image-black {
+  width: 60px;
+  height: 60px;
+  background-image: url('black.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+#pen-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 55px;
+}
+
+/* Cambia el control deslizante del rango por la imagen 'gato.png' */
+.pen-size{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #FF1FC3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Estilo para el control deslizante en navegadores Webkit (como Chrome y Safari) */
+.pen-size::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  background: url('gato.png');
+  background-size: 100%; /* Ajusta el tamaño de la imagen para llenar el control */
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none; /* Elimina el borde predeterminado */
+}
